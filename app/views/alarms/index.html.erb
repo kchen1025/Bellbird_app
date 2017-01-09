@@ -4,7 +4,10 @@
   <% @alarm.each do |alarm| %>
     <li class="list-group-item">
       <%= alarm.content %>
+	
       <span class="badge"><%= alarm.upvotes %></span>
+      <%= link_to "upvote", alarm, method: :patch%>
+      <%= link_to "delete", alarm, method: :delete, data: { confirm: "Confirm Delete" } %>
     </li>
   <% end %>
 </ul>
