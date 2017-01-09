@@ -1,0 +1,10 @@
+<h1>Alarms</h1>
+
+<ul class="list-group">
+  <% @alarm.each do |alarm| %>
+    <li class="list-group-item">
+      <%= alarm.content %>
+      <span class="badge"><%= alarm.upvotes %></span>
+    </li>
+  <% end %>
+</ul>
